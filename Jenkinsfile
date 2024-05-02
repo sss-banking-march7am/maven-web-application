@@ -11,7 +11,7 @@ echo "The Build number is: ${env.BUILD_NUMBER}"
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'RebuildSettings', autoRebuild: false, rebuildDisabled: false], [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
 
 stage('CheckoutCode'){
-git branch: 'development', credentialsId: 'd6df2d94-c538-42c5-9f24-fe8f34e2d3ed', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+git branch: 'development', url: 'https://github.com/sss-banking-march7am/maven-web-application.git'
 }
 
 stage('Build'){
